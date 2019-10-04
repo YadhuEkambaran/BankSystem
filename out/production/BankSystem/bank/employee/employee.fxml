@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.EmployeeController">
    <children>
-      <Label id="lb_create_user" alignment="CENTER" layoutX="-11.0" layoutY="115.0" prefHeight="54.0" prefWidth="153.0" stylesheets="@employee.css" onMouseClicked="#onCreateUserClicked" text="CREATE USER">
+      <Label id="lb_create_user" alignment="CENTER" layoutX="-11.0" layoutY="115.0" onMouseClicked="#onCreateUser" prefHeight="54.0" prefWidth="153.0" stylesheets="@employee.css" text="CREATE USER">
          <font>
             <Font name="SansSerif Bold" size="14.0" />
          </font>
@@ -17,7 +17,7 @@
             <String fx:value="label" />
          </styleClass>
       </Label>
-      <Label id="lb_deposit" fx:id="lb_deposit" alignment="CENTER" layoutX="-11.0" layoutY="187.0" prefHeight="54.0" prefWidth="153.0" stylesheets="@employee.css" onMouseClicked="#onDepositClicked" text="DEPOSIT">
+      <Label id="lb_deposit" fx:id="lb_deposit" alignment="CENTER" layoutX="-11.0" layoutY="187.0" prefHeight="54.0" prefWidth="153.0" stylesheets="@employee.css" text="DEPOSIT">
          <font>
             <Font name="SansSerif Bold" size="14.0" />
          </font>
@@ -26,12 +26,12 @@
             <String fx:value="label" />
          </styleClass>
       </Label>
-      <Label id="lb_update_user" alignment="CENTER" layoutX="454.0" layoutY="115.0" prefHeight="54.0" prefWidth="153.0" stylesheets="@employee.css" onMouseClicked="#onUpdateUserClicked" text="UPDATE USER">
+      <Label id="lb_update_user" alignment="CENTER" layoutX="454.0" layoutY="115.0" prefHeight="54.0" prefWidth="153.0" stylesheets="@employee.css" text="UPDATE USER">
          <font>
             <Font name="SansSerif Bold" size="14.0" />
          </font>
       </Label>
-      <Label id="lb_withdraw" alignment="CENTER" layoutX="454.0" layoutY="187.0" prefHeight="54.0" prefWidth="163.0" stylesheets="@employee.css" onMouseClicked="#onWithdrawClicked" text="WITHDRAW">
+      <Label id="lb_withdraw" alignment="CENTER" layoutX="454.0" layoutY="187.0" prefHeight="54.0" prefWidth="163.0" stylesheets="@employee.css" text="WITHDRAW">
          <font>
             <Font name="SansSerif Bold" size="14.0" />
          </font>
