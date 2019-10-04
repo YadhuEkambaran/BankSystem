@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.user.User">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="606.0">
+         <children>
+            <JFXTextField id="user_account_no" alignment="CENTER" layoutX="158.0" layoutY="138.0" prefHeight="27.0" prefWidth="315.0" promptText="Account Number" styleClass="jfx-text-field" stylesheets="@user.css">
+               <font>
+                  <Font name="SansSerif Bold" size="19.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXTextField>
+            <JFXTextField id="user_pin" alignment="CENTER" layoutX="250.0" layoutY="194.0" prefHeight="27.0" prefWidth="130.0" promptText="PIN" styleClass="jfx-text-field" stylesheets="@user.css">
+               <font>
+                  <Font name="SansSerif Bold" size="19.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton id="user_login_submit" layoutX="250.0" layoutY="263.0" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #2938dc;" text="ENTER" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
