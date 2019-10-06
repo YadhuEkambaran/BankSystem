@@ -1,5 +1,6 @@
 package bank.model;
 
+import bank.common.Constants;
 import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -24,9 +25,21 @@ public class FolderFileManager {
         return file.createNewFile();
     }
 
-    public static boolean createUserFile() throws IOException {
-        File file = new File(String.valueOf(System.currentTimeMillis()));
-        return file.createNewFile();
+    public static long createUserFile() throws IOException {
+        File folder = new File(Constants.FOLDER_NAME_USER);
+        if (!folder.exists()) {
+            boolean folderCreated = folder.mkdir();
+            if (folderCreated) {
+                showMessage("User folder created");
+            } else {
+                return Constants.ErrorCode.USER_FOLDER_CREATION_FAILED;
+            }
+        }
+
+        long fileName = System.currentTimeMillis();
+        File file = new File(Constants.FOLDER_NAME_USER + System.currentTimeMillis() + ".txt");
+        boolean isFileCreated = file.createNewFile();
+        return isFileCreated? fileName : Constants.ErrorCode.USER_FILE_CREATION_FAILED;
     }
 
     public static void write(String fileName, JSONObject object) throws IOException {
@@ -40,6 +53,10 @@ public class FolderFileManager {
         File file = new File(fileName);
         JSONParser parser = new JSONParser();
         return (JSONObject) parser.parse(FileUtils.readFileToString(file, ENCODING_));
+    }
+
+    public static void showMessage(String message) {
+        System.out.println(message);
     }
 
 }

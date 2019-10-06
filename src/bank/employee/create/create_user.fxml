@@ -1,32 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.create.CreateUserController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #455A64455A64;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.create.CreateUserController">
    <children>
-      <JFXTextField id="tf_first_name" layoutX="38.0" layoutY="46.0" prefHeight="27.0" prefWidth="189.0" promptText="First name">
+      <JFXTextField id="tf_first_name" fx:id="tf_first_name" layoutX="14.0" layoutY="38.0" prefHeight="39.0" prefWidth="174.0" promptText="First name">
          <font>
             <Font name="SansSerif Regular" size="16.0" />
          </font>
       </JFXTextField>
-      <JFXDatePicker id="dp_dob" defaultColor="#00028f" layoutX="38.0" layoutY="144.0" promptText="Date of birth" />
-      <JFXTextField id="tf_personnal_id" layoutX="38.0" layoutY="190.0" prefHeight="27.0" prefWidth="189.0" promptText="Personnal ID">
+      <JFXTextField id="tf_personnal_id" fx:id="tf_personnal_id" layoutX="14.0" layoutY="162.0" prefHeight="39.0" prefWidth="174.0" promptText="Social ID No">
          <font>
             <Font name="SansSerif Regular" size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField id="tf_last_name" layoutX="38.0" layoutY="95.0" prefHeight="27.0" prefWidth="189.0" text="Last name">
+      <JFXTextField id="tf_last_name" fx:id="tf_last_name" layoutX="396.0" layoutY="38.0" prefHeight="39.0" prefWidth="189.0" promptText="Last name">
          <font>
             <Font name="SansSerif Regular" size="16.0" />
          </font>
       </JFXTextField>
-      <JFXComboBox id="cb_account_type" layoutX="38.0" layoutY="241.0" prefHeight="27.0" prefWidth="189.0" promptText="Account type" />
-      <JFXButton layoutX="500.0" layoutY="334.0" prefHeight="32.0" prefWidth="96.0" text="CREATE" />
+      <JFXButton fx:id="btn_create" buttonType="RAISED" layoutX="695.0" layoutY="551.0" onAction="#onCreateClick" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #424242424242; -fx-border-color: #000000; -fx-border-radius: 4;" text="CREATE">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btn_back" layoutX="10.0" layoutY="551.0" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #424242424242; -fx-border-color: #000000; -fx-border-radius: 4;" text="BACK">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="dp_dob" layoutX="14.0" layoutY="105.0" prefHeight="39.0" prefWidth="174.0" promptText="Date of birth" />
+      <JFXTextField fx:id="tf_middle_name" layoutX="198.0" layoutY="38.0" prefHeight="39.0" prefWidth="189.0" promptText="Middle Name">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="1.0" layoutY="541.0" prefHeight="3.0" prefWidth="800.0" />
+      <JFXTextField fx:id="tf_address" layoutX="14.0" layoutY="220.0" prefHeight="39.0" prefWidth="575.0" promptText="Address">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tf_city" layoutX="14.0" layoutY="279.0" prefHeight="39.0" prefWidth="174.0" promptText="City">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tf_province" layoutX="199.0" layoutY="278.0" prefHeight="39.0" prefWidth="174.0" promptText="Province">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tf_mobile_no" layoutX="387.0" layoutY="278.0" prefHeight="39.0" prefWidth="201.0" promptText="Mobile No">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXCheckBox layoutX="161.0" layoutY="355.0" />
+      <Label layoutX="14.0" layoutY="353.0" text="Account Type">
+         <font>
+            <Font name="SansSerif Regular" size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
