@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.view.edit.EditController">
    <children>
-      <Pane layoutX="11.0" layoutY="70.0" prefHeight="187.0" prefWidth="772.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
+      <Pane layoutX="11.0" layoutY="70.0" prefHeight="134.0" prefWidth="772.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
          <children>
             <JFXTextField id="tf_first_name" fx:id="tf_first_name" layoutX="24.0" layoutY="15.0" prefHeight="39.0" prefWidth="174.0" promptText="First name">
                <font>
@@ -31,7 +31,7 @@
             </JFXTextField>
             <DatePicker fx:id="dp_dob" layoutX="24.0" layoutY="76.0" prefHeight="39.0" prefWidth="174.0" promptText="Date of birth" />
 
-            <JFXTextField id="tf_personnal_id" fx:id="tf_personnal_id" layoutX="24.0" layoutY="130.0" prefHeight="39.0" prefWidth="174.0" promptText="Social ID No">
+            <JFXTextField id="tf_personnal_id" fx:id="tf_personnal_id" layoutX="221.0" layoutY="76.0" prefHeight="39.0" prefWidth="174.0" promptText="Social ID No">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
@@ -45,24 +45,24 @@
       </Label>
       <Separator layoutY="52.0" prefHeight="3.0" prefWidth="817.0" />
 
-      <Pane layoutX="14.0" layoutY="267.0" prefHeight="134.0" prefWidth="772.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
+      <Pane layoutX="11.0" layoutY="213.0" prefHeight="134.0" prefWidth="514.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
          <children>
-            <JFXTextField fx:id="tf_address" layoutX="20.0" layoutY="12.0" prefHeight="39.0" prefWidth="575.0" promptText="Address">
+            <JFXTextField fx:id="tf_address" layoutX="20.0" layoutY="12.0" prefHeight="39.0" prefWidth="478.0" promptText="Address">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="tf_city" layoutX="20.0" layoutY="66.0" prefHeight="39.0" prefWidth="174.0" promptText="City">
+            <JFXTextField fx:id="tf_city" layoutX="20.0" layoutY="66.0" prefHeight="39.0" prefWidth="146.0" promptText="City">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="tf_province" layoutX="221.0" layoutY="66.0" prefHeight="39.0" prefWidth="174.0" promptText="Province">
+            <JFXTextField fx:id="tf_province" layoutX="176.0" layoutY="66.0" prefHeight="39.0" prefWidth="146.0" promptText="Province">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="tf_mobile_no" layoutX="423.0" layoutY="66.0" prefHeight="39.0" prefWidth="201.0" promptText="Mobile No">
+            <JFXTextField fx:id="tf_mobile_no" layoutX="334.0" layoutY="66.0" prefHeight="39.0" prefWidth="165.0" promptText="Mobile No">
                <font>
                   <Font name="SansSerif Regular" size="16.0" />
                </font>
@@ -80,7 +80,7 @@
          </font>
       </JFXButton>
       <Separator layoutY="537.0" prefHeight="3.0" prefWidth="817.0" />
-      <Pane layoutX="586.0" layoutY="427.0" prefHeight="97.0" prefWidth="200.0" style="-fx-border-color: #E4E4E4; -fx-border-radius: 4;">
+      <Pane layoutX="583.0" layoutY="402.0" prefHeight="97.0" prefWidth="200.0" style="-fx-border-color: #E4E4E4; -fx-border-radius: 4;">
          <children>
             <Label fx:id="label_balance" layoutX="58.0" layoutY="42.0" text="1000">
                <font>
@@ -95,12 +95,50 @@
             <Label layoutX="10.0" layoutY="-9.0" style="-fx-background-color: #f4f4f4;" text="Balance" />
          </children>
       </Pane>
-      <Label layoutX="37.0" layoutY="466.0" text="Account Type - ">
-         <font>
-            <Font name="SansSerif Regular" size="16.0" />
-         </font>
-      </Label>
-      <JFXRadioButton fx:id="rb_checking" layoutX="181.0" layoutY="467.0" text="Checking Account" />
-      <JFXRadioButton fx:id="rb_savings" layoutX="351.0" layoutY="467.0" text="Savings account" />
+      <Pane layoutX="545.0" layoutY="213.0" prefHeight="134.0" prefWidth="236.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
+         <children>
+            <Label layoutX="74.0" layoutY="17.0" text="Account Type - ">
+               <font>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="rb_checking" layoutX="37.0" layoutY="52.0" text="Checking Account" />
+            <JFXRadioButton fx:id="rb_savings" layoutX="36.0" layoutY="79.0" text="Savings account" />
+         </children>
+      </Pane>
+      <Pane layoutX="84.0" layoutY="359.0" prefHeight="167.0" prefWidth="271.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
+         <children>
+            <Label layoutX="21.0" layoutY="37.0" text="1234     5678     9012    3456">
+               <font>
+                  <Font name="Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="126.0" text="Yadhu ekambaran Naiker">
+               <font>
+                  <Font name="Sinhala MN" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="84.0" text="EXPIRATION END OF ">
+               <font>
+                  <Font name="Sinhala MN" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="177.0" layoutY="84.0" text="07">
+               <font>
+                  <Font name="Sinhala MN" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="191.0" layoutY="83.0" text="/">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="197.0" layoutY="84.0" text="2017">
+               <font>
+                  <Font name="Sinhala MN" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

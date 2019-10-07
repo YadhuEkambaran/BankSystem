@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.payment.dashboard.DashboardController">
+   <children>
+      <Label fx:id="label_hydro" alignment="CENTER" layoutX="236.0" layoutY="228.0" onMouseClicked="#onHydroClicked" prefHeight="144.0" prefWidth="154.0" style="-fx-border-color: #e4e4e4;" text="Hydro">
+         <font>
+            <Font name="SansSerif Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_mobile" alignment="CENTER" layoutX="410.0" layoutY="228.0" onMouseClicked="#onMobileClicked" prefHeight="144.0" prefWidth="154.0" style="-fx-border-color: #e4e4e4;" text="Mobile">
+         <font>
+            <Font name="SansSerif Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

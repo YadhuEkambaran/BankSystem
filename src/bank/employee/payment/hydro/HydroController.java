@@ -1,4 +1,4 @@
-package bank.employee.payment.mobile;
+package bank.employee.payment.hydro;
 
 import bank.common.Constants;
 import bank.common.InitController;
@@ -19,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class MobileController implements Initializable, InitController {
+public class HydroController implements Initializable, InitController {
 
     @FXML
-    JFXTextField tf_mobile_no;
+    JFXTextField tf_account_no;
 
     @FXML
     JFXTextField tf_card_no;
@@ -69,9 +69,16 @@ public class MobileController implements Initializable, InitController {
         }
     }
 
+    @FXML
+    public void onBackClicked() {
+        if (mSwapController == null) return;
+
+        mSwapController.goToPaymentDashboardPage();
+    }
+
+    @FXML
     public void onMakePaymentClicked() {
-        String mobileNo = tf_mobile_no.getText();
-        String provider = cb_provider.getValue();
+        String mobileNo = tf_account_no.getText();
         String cardNo = tf_card_no.getText();
         String amount = tf_amount.getText();
         int date = cb_date.getValue();
@@ -79,9 +86,6 @@ public class MobileController implements Initializable, InitController {
 
         if (mobileNo.equals("")) {
             Utils.showDialog("Mobile number can not be empty", Alert.AlertType.ERROR);
-            return;
-        } else if (mobileNo.length() != 10) {
-            Utils.showDialog("Enter a valid 10 digit number", Alert.AlertType.ERROR);
             return;
         } else if (amount.equals("")) {
             Utils.showDialog("Amount can not be empty", Alert.AlertType.ERROR);
@@ -100,12 +104,6 @@ public class MobileController implements Initializable, InitController {
 
     }
 
-    public void onBackClicked() {
-        if (mSwapController == null) return;
-
-        mSwapController.goToPaymentDashboardPage();
-    }
-
     private boolean checkCardDetails(String enteredCardNo, int enteredDate, int enteredYear, float amount) {
         JSONObject userAccountDetails = FolderFileManager.getUserDetailsBasedOnCardNo(enteredCardNo);
         if (userAccountDetails == null) {
@@ -118,15 +116,15 @@ public class MobileController implements Initializable, InitController {
             if (enteredCardNo.equals(cardNo) && enteredDate == date && enteredYear == year) {
                 double balance = (double) userAccountDetails.get(Constants.JsonKeys.USER_BALANCE);
 
-                    if (amount <= balance) {
-                        balance = balance - amount;
-                        JSONObject accountDetails = FolderFileManager.getUserAccountDetailsBasedOnCardNo(enteredCardNo);
-                        doWithdrawal(accountDetails, balance, amount, enteredCardNo);
+                if (amount <= balance) {
+                    balance = balance - amount;
+                    JSONObject accountDetails = FolderFileManager.getUserAccountDetailsBasedOnCardNo(enteredCardNo);
+                    doWithdrawal(accountDetails, balance, amount, enteredCardNo);
 
-                        clearFields();
-                        Utils.showDialog("Payment completed successfully", Alert.AlertType.INFORMATION);
+                    clearFields();
+                    Utils.showDialog("Payment completed successfully", Alert.AlertType.INFORMATION);
 
-                    } else {
+                } else {
                     Utils.showDialog("User does not have sufficient balance", Alert.AlertType.ERROR);
                 }
             } else {
@@ -160,7 +158,7 @@ public class MobileController implements Initializable, InitController {
     }
 
     private void clearFields() {
-        tf_mobile_no.setText("");
+        tf_account_no.setText("");
         tf_card_no.setText("");
         tf_amount.setText("");
         cb_provider.getSelectionModel().clearSelection();

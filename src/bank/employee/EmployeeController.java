@@ -86,7 +86,7 @@ public class EmployeeController implements Initializable, InitController {
     public void onBillPaymentCicked() {
         if (mSwapController == null) return;
 
-        mSwapController.goToWithdrawPage();
+        mSwapController.goToPaymentDashboardPage();
     }
 
     public static void showMessage(String msg) {

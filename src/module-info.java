@@ -15,4 +15,7 @@ module BankSystem {
     opens bank.employee.transfer;
     opens bank.employee.view;
     opens bank.employee.view.edit;
+    opens bank.employee.payment.mobile;
+    opens bank.employee.payment.dashboard;
+    opens bank.employee.payment.hydro;
 }

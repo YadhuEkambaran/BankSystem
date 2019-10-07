@@ -153,13 +153,16 @@ public class CreateUserController implements Initializable, InitController {
         Random random = new Random();
         String PIN = String.format("%04d", random.nextInt(10000));
 
+        String debitCardNo = debitCardNo();
+        int expiryDate = random.nextInt(29) + 1;
+
         JSONObject userDerails = new JSONObject();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put(Constants.JsonKeys.USER_FIRST_NAME, firstName);
         jsonObject.put(Constants.JsonKeys.USER_MIDDLE_NAME, middleName);
         jsonObject.put(Constants.JsonKeys.USER_LAST_NAME, lastName);
         jsonObject.put(Constants.JsonKeys.USER_SIN, sin);
-        jsonObject.put(Constants.JsonKeys.USER_DOB, date);
+        jsonObject.put(Constants.JsonKeys.USER_DOB, dob);
         jsonObject.put(Constants.JsonKeys.USER_ADDRESS, address);
         jsonObject.put(Constants.JsonKeys.USER_CITY, city);
         jsonObject.put(Constants.JsonKeys.USER_PROVINCE, province);
@@ -168,7 +171,12 @@ public class CreateUserController implements Initializable, InitController {
         jsonObject.put(Constants.JsonKeys.USER_ACCOUNT_TYPE, accountType);
         jsonObject.put(Constants.JsonKeys.USER_BALANCE, bal);
         jsonObject.put(Constants.JsonKeys.USER_PIN, PIN);
+        jsonObject.put(Constants.JsonKeys.USER_DEBIT_CARD_NO, debitCardNo);
+        jsonObject.put(Constants.JsonKeys.USER_DEBIT_CARD_NO_EXPIRY_DATE, expiryDate);
+        jsonObject.put(Constants.JsonKeys.USER_DEBIT_CARD_NO_EXPIRY_YEAR, 2024);
+
         userDerails.put(Constants.JsonKeys.USER_DETAILS, jsonObject);
+
         try {
             long fileName = FolderFileManager.createUserFile();
             if (fileName > 405) {
@@ -182,6 +190,16 @@ public class CreateUserController implements Initializable, InitController {
             FolderFileManager.showMessage("Some error occurred");
             e.printStackTrace();
         }
+    }
+
+    private String debitCardNo() {
+        Random random = new Random();
+        String card1 = String.format("%04d", random.nextInt(10000));
+        String card2 = String.format("%04d", random.nextInt(10000));
+        String card3 = String.format("%04d", random.nextInt(10000));
+        String card4 = String.format("%04d", random.nextInt(10000));
+
+        return card1 + card2 + card3 + card4;
     }
 
     public void onBackClicked() {

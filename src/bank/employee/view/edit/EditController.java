@@ -61,6 +61,9 @@ public class EditController implements Initializable, InitController {
     @FXML
     JFXRadioButton rb_savings;
 
+    @FXML
+
+
     private SwapController mSwapController;
 
     private String mAccountNo;

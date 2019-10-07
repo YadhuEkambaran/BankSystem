@@ -41,6 +41,11 @@ public interface Constants {
          String USER_TRANSFER_DATE = "transfer_date";
          String USER_TRANSFER_AMOUNT = "transfer_amount";
 
+         String USER_DEBIT_CARD_NO = "debit_card_no";
+         String USER_DEBIT_CARD_NO_EXPIRY_DATE = "debit_card_no_expiry_date";
+         String USER_DEBIT_CARD_NO_EXPIRY_YEAR = "debit_card_no_expiry_year";
+         String USER_DEBIT_CARD_NO_CVV = "cvv";
+
      }
 
      interface ErrorCode {
