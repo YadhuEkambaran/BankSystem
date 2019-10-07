@@ -2,6 +2,11 @@ package bank.common;
 
 import bank.employee.EmployeeController;
 import bank.employee.create.CreateUserController;
+import bank.employee.deposit.DepositController;
+import bank.employee.transfer.TransferController;
+import bank.employee.view.ViewController;
+import bank.employee.view.edit.EditController;
+import bank.employee.withdraw.WithdrawController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -39,6 +44,72 @@ public class SwapController {
             mScene.setRoot(loader.load());
             CreateUserController controller = loader.getController();
             controller.init(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToDepositPage() {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/bank/employee/deposit/deposit.fxml")
+        );
+        try {
+            mScene.setRoot(loader.load());
+            DepositController controller = loader.getController();
+            controller.init(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToWithdrawPage() {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/bank/employee/withdraw/withdraw.fxml")
+        );
+        try {
+            mScene.setRoot(loader.load());
+            WithdrawController controller = loader.getController();
+            controller.init(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToTransferPage() {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/bank/employee/transfer/transfer.fxml")
+        );
+        try {
+            mScene.setRoot(loader.load());
+            TransferController controller = loader.getController();
+            controller.init(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToViewPage() {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/bank/employee/view/view.fxml")
+        );
+        try {
+            mScene.setRoot(loader.load());
+            ViewController controller = loader.getController();
+            controller.init(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToEditPage(String accountNo) {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/bank/employee/view/edit/edit.fxml")
+        );
+        try {
+            mScene.setRoot(loader.load());
+            EditController controller = loader.getController();
+            controller.init(this);
+            controller.setAccountNo(accountNo);
         } catch (IOException e) {
             e.printStackTrace();
         }

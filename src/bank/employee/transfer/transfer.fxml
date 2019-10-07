@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.transfer.TransferController">
+   <children>
+      <JFXTextField fx:id="tf_from_account_no" layoutX="255.0" layoutY="165.0" prefHeight="35.0" prefWidth="244.0" promptText="From account no">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tf_to_account_no" layoutX="255.0" layoutY="230.0" prefHeight="35.0" prefWidth="244.0" promptText="To account no">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="tf_amount" layoutX="255.0" layoutY="300.0" prefHeight="27.0" prefWidth="244.0" promptText="Amount">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btn_transfer" layoutX="680.0" layoutY="556.0" onMouseClicked="#onTransferClicked" style="-fx-background-color: #424242424242; -fx-border-color: #000000; -fx-border-radius: 4;" text="TRANSFER">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutY="544.0" prefHeight="5.0" prefWidth="805.0" />
+      <JFXButton fx:id="btn_back" layoutX="11.0" layoutY="556.0" onMouseClicked="#onBackClicked" style="-fx-background-color: #424242424242; -fx-border-color: #000000; -fx-border-radius: 4;" text="BACK">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="11.0" layoutY="10.0" text="Inner Transfer">
+         <font>
+            <Font name="SansSerif Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-7.0" layoutY="50.0" prefHeight="5.0" prefWidth="813.0" />
+      <Label fx:id="label_date" layoutX="711.0" layoutY="31.0" text="12/10/2019" textFill="#1b1a1a">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

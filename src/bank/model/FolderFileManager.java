@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FolderFileManager {
 
@@ -53,6 +55,19 @@ public class FolderFileManager {
         File file = new File(fileName);
         JSONParser parser = new JSONParser();
         return (JSONObject) parser.parse(FileUtils.readFileToString(file, ENCODING_));
+    }
+
+    public static List<String> getUserAccountList() {
+        File folder = new File(Constants.FOLDER_NAME_USER);
+        File[] accounts = folder.listFiles();
+        List<String> accountList = new ArrayList<>();
+        for (File file:
+             accounts) {
+            String fileName = file.getName();
+            accountList.add(fileName.substring(0, fileName.length() - 4));
+        }
+
+        return accountList;
     }
 
     public static void showMessage(String message) {

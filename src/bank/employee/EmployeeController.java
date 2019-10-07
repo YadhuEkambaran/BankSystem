@@ -2,6 +2,7 @@ package bank.employee;
 
 import bank.common.InitController;
 import bank.common.SwapController;
+import bank.common.Utils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,6 +20,9 @@ import java.util.ResourceBundle;
 public class EmployeeController implements Initializable, InitController {
 
     @FXML
+    Label label_date;
+
+    @FXML
     Label lb_create_user;
 
     @FXML
@@ -30,11 +34,17 @@ public class EmployeeController implements Initializable, InitController {
     @FXML
     Label lb_withdraw;
 
+    @FXML
+    Label lb_transfer;
+
+    @FXML
+    Label lb_bill_payment;
+
     private SwapController mSwapController;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        label_date.setText(Utils.loadDate());
     }
 
     @FXML
@@ -46,24 +56,37 @@ public class EmployeeController implements Initializable, InitController {
 
     @FXML
     public void onUpdateUserClicked() {
-        final Stage dialog = new Stage();
-        dialog.initModality(Modality.APPLICATION_MODAL);
-        VBox dialogVbox = new VBox(20);
-        dialogVbox.getChildren().add(new Text("This is a Dialog"));
-        Scene dialogScene = new Scene(dialogVbox, 300, 200);
-        dialog.setScene(dialogScene);
-        dialog.show();
-        showMessage("Update user clicked");
+        if (mSwapController == null) return;
+
+        mSwapController.goToViewPage();
     }
 
     @FXML
     public void onDepositClicked() {
-        showMessage("Deposit clicked");
+        if (mSwapController == null) return;
+
+        mSwapController.goToDepositPage();
     }
 
     @FXML
     public void onWithdrawClicked() {
-        showMessage("Withdraw clicked");
+        if (mSwapController == null) return;
+
+        mSwapController.goToWithdrawPage();
+    }
+
+    @FXML
+    public void onTransferCicked() {
+        if (mSwapController == null) return;
+
+        mSwapController.goToTransferPage();
+    }
+
+    @FXML
+    public void onBillPaymentCicked() {
+        if (mSwapController == null) return;
+
+        mSwapController.goToWithdrawPage();
     }
 
     public static void showMessage(String msg) {

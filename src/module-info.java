@@ -10,4 +10,9 @@ module BankSystem {
     opens bank.user;
     opens bank.employee;
     opens bank.employee.create;
+    opens bank.employee.deposit;
+    opens bank.employee.withdraw;
+    opens bank.employee.transfer;
+    opens bank.employee.view;
+    opens bank.employee.view.edit;
 }

@@ -6,15 +6,23 @@ import bank.common.SwapController;
 import bank.common.Utils;
 import bank.model.FolderFileManager;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class CreateUserController implements Initializable, InitController {
@@ -52,6 +60,16 @@ public class CreateUserController implements Initializable, InitController {
     @FXML
     JFXTextField tf_mobile_no;
 
+    @FXML
+    JFXRadioButton rb_checking;
+
+    @FXML
+    JFXRadioButton rb_savings;
+
+    @FXML
+    JFXTextField tf_initial_deposit;
+
+
     private SwapController mSwapController;
 
     @Override
@@ -61,7 +79,20 @@ public class CreateUserController implements Initializable, InitController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ToggleGroup toggleGroup = new ToggleGroup();
+        rb_checking.setToggleGroup(toggleGroup);
+        rb_savings.setToggleGroup(toggleGroup);
 
+        toggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                if (t1 == rb_checking) {
+                    tf_initial_deposit.setVisible(false);
+                } else {
+                    tf_initial_deposit.setVisible(true);
+                }
+            }
+        });
     }
 
     @FXML
@@ -74,12 +105,29 @@ public class CreateUserController implements Initializable, InitController {
         String city = tf_city.getText();
         String province = tf_province.getText();
         String mobileNo = tf_mobile_no.getText();
+        LocalDate date = dp_dob.getValue();
+
+        String balance = tf_initial_deposit.getText();
+        float bal = 0.0f;
+        if (balance != null && balance.length() > 0) {
+            bal = Float.valueOf(balance);
+        }
+        int accountType;
+        if (rb_checking.isSelected()) {
+            accountType = Constants.ACCOUNT_TYPE_CHECKING;
+        } else {
+            accountType = Constants.ACCOUNT_TYPE_SAVINGS;
+        }
+
 
         if (firstName.equals("")) {
             Utils.showDialog("First name can not be empty", Alert.AlertType.ERROR);
             return;
         } else if (lastName.equals("")) {
             Utils.showDialog("Last name can not be empty", Alert.AlertType.ERROR);
+            return;
+        } else if (date == null) {
+            Utils.showDialog("Date can not be empty", Alert.AlertType.ERROR);
             return;
         } else if (sin.equals("")) {
             Utils.showDialog("Social Number field can not be empty", Alert.AlertType.ERROR);
@@ -98,22 +146,35 @@ public class CreateUserController implements Initializable, InitController {
             return;
         }
 
+        String pattern = "dd/MM/YYYY";
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
+        String dob = date.format(dateFormatter);
+
+        Random random = new Random();
+        String PIN = String.format("%04d", random.nextInt(10000));
+
+        JSONObject userDerails = new JSONObject();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put(Constants.JsonKeys.USER_FIRST_NAME, firstName);
         jsonObject.put(Constants.JsonKeys.USER_MIDDLE_NAME, middleName);
         jsonObject.put(Constants.JsonKeys.USER_LAST_NAME, lastName);
         jsonObject.put(Constants.JsonKeys.USER_SIN, sin);
-        jsonObject.put(Constants.JsonKeys.USER_DOB, "");
+        jsonObject.put(Constants.JsonKeys.USER_DOB, date);
         jsonObject.put(Constants.JsonKeys.USER_ADDRESS, address);
         jsonObject.put(Constants.JsonKeys.USER_CITY, city);
         jsonObject.put(Constants.JsonKeys.USER_PROVINCE, province);
         jsonObject.put(Constants.JsonKeys.USER_COUNTRY, "Canada");
         jsonObject.put(Constants.JsonKeys.USER_MOBILE_NO, mobileNo);
-
+        jsonObject.put(Constants.JsonKeys.USER_ACCOUNT_TYPE, accountType);
+        jsonObject.put(Constants.JsonKeys.USER_BALANCE, bal);
+        jsonObject.put(Constants.JsonKeys.USER_PIN, PIN);
+        userDerails.put(Constants.JsonKeys.USER_DETAILS, jsonObject);
         try {
             long fileName = FolderFileManager.createUserFile();
             if (fileName > 405) {
-                FolderFileManager.write(Constants.FOLDER_NAME_USER + fileName + ".txt", jsonObject);
+                FolderFileManager.write(Constants.FOLDER_NAME_USER + fileName + ".txt", userDerails);
+
+                Utils.showDialog("Created new user\nAccount no - " + fileName + "\nAutogenerated PIN - " + PIN, Alert.AlertType.INFORMATION);
             } else {
                 FolderFileManager.showMessage("Some error occurred");
             }
@@ -121,5 +182,11 @@ public class CreateUserController implements Initializable, InitController {
             FolderFileManager.showMessage("Some error occurred");
             e.printStackTrace();
         }
+    }
+
+    public void onBackClicked() {
+        if (mSwapController == null) return;
+
+        mSwapController.goToMainPage();
     }
 }
