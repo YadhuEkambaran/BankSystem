@@ -1,0 +1,20 @@
+{
+  "employee_details" : [
+      {
+        "emp_name":"Yadhukrishnan Ekambaram",
+        "emp_id": "7474747",
+        "emp_pin":1234
+        "emp_salary":100000,
+        "emp_address":"address",
+        "emp_mobile_no":"6479068374"
+      },
+      {
+        "emp_name":"Noel Abraham Reji",
+        "emp_id": "7474746",
+        "emp_pin":1234
+        "emp_salary":100000,
+        "emp_address":"address",
+        "emp_mobile_no":"6479068374"
+      }
+    ]
+}

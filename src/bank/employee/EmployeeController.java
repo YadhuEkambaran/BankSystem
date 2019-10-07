@@ -1,18 +1,13 @@
 package bank.employee;
 
+import bank.common.Constants;
 import bank.common.InitController;
 import bank.common.SwapController;
 import bank.common.Utils;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
+import org.json.simple.JSONObject;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,6 +34,9 @@ public class EmployeeController implements Initializable, InitController {
 
     @FXML
     Label lb_bill_payment;
+
+    @FXML
+    Label label_employee_name;
 
     private SwapController mSwapController;
 
@@ -89,12 +87,25 @@ public class EmployeeController implements Initializable, InitController {
         mSwapController.goToPaymentDashboardPage();
     }
 
-    public static void showMessage(String msg) {
-        System.out.println(msg);
+    @FXML
+    public void onLogoutClick() {
+        if (mSwapController == null) return;
+
+        mSwapController.setEmployeeDetails(null);
+        mSwapController.goToLoginPage();
     }
 
     @Override
     public void init(SwapController controller) {
         mSwapController = controller;
+        JSONObject employee = mSwapController.getEmployeeDetails();
+        if (employee != null) {
+            String empName = (String) employee.get(Constants.JsonKeys.EMPLOYEE_NAME);
+            String empId = (String) employee.get(Constants.JsonKeys.EMPLOYEE_ID);
+            label_employee_name.setText(empName + "(" + empId + ")");
+        } else {
+            mSwapController.goToLoginPage();
+        }
+
     }
 }

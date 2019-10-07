@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.payment.dashboard.DashboardController">
    <children>
@@ -17,5 +18,17 @@
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </Label>
+      <Label layoutX="11.0" layoutY="11.0" text="Payment">
+         <font>
+            <Font name="SansSerif Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutY="51.0" prefHeight="0.0" prefWidth="800.0" />
+      <Separator layoutY="540.0" prefHeight="3.0" prefWidth="800.0" />
+      <JFXButton layoutX="11.0" layoutY="555.0" onMouseClicked="#onBackClicked" style="-fx-background-color: #424242424242; -fx-border-color: #000000; -fx-border-radius: 4;" text="BACK">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

@@ -42,4 +42,11 @@ public class DashboardController implements InitController, Initializable {
 
         mSwaController.goToMobilePaymentPage();
     }
+
+    @FXML
+    public void onBackClicked() {
+        if (mSwaController == null) return;
+
+        mSwaController.goToMainPage();
+    }
 }

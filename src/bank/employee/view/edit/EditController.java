@@ -62,7 +62,16 @@ public class EditController implements Initializable, InitController {
     JFXRadioButton rb_savings;
 
     @FXML
+    Label label_card_no;
 
+    @FXML
+    Label label_name;
+
+    @FXML
+    Label label_date;
+
+    @FXML
+    Label label_year;
 
     private SwapController mSwapController;
 
@@ -94,6 +103,8 @@ public class EditController implements Initializable, InitController {
         ToggleGroup toggleGroup = new ToggleGroup();
         rb_checking.setToggleGroup(toggleGroup);
         rb_savings.setToggleGroup(toggleGroup);
+
+        dp_dob.setVisible(false);
     }
 
     private void setupUserDetails() {
@@ -113,8 +124,27 @@ public class EditController implements Initializable, InitController {
         else rb_savings.setSelected(true);
 
         label_balance.setText(userDetails.get(Constants.JsonKeys.USER_BALANCE).toString());
+        String cardNo = (String) userDetails.get(Constants.JsonKeys.USER_DEBIT_CARD_NO);
+        String section1 = cardNo.substring(0, 4);
+        String section2 = cardNo.substring(4, 8);
+        String section3 = cardNo.substring(8, 12);
+        String section4 = cardNo.substring(12, 16);
 
+        String seperator = "     ";
+
+        label_card_no.setText(section1 + seperator + section2 + seperator + section3 + seperator + section4);
+        label_date.setText(String.valueOf(userDetails.get(Constants.JsonKeys.USER_DEBIT_CARD_NO_EXPIRY_DATE)));
+        label_year.setText(String.valueOf(userDetails.get(Constants.JsonKeys.USER_DEBIT_CARD_NO_EXPIRY_YEAR)));
+        String name = userDetails.get(Constants.JsonKeys.USER_FIRST_NAME).toString() + " " +
+                userDetails.get(Constants.JsonKeys.USER_MIDDLE_NAME).toString() + " " +
+                userDetails.get(Constants.JsonKeys.USER_LAST_NAME).toString();
+         label_name.setText(name);
         label_account_no.setText(mAccountNo);
+
+//        DateTimeFormatter df = DateTimeFormatter.ofPattern("ddMMYYYY");
+//        LocalDate date = LocalDate.parse(userDetails.get(Constants.JsonKeys.USER_DOB).toString().replace("/", ""), df);
+//        dp_dob.setValue(date);
+
     }
 
     @FXML

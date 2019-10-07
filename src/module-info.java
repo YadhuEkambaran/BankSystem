@@ -7,7 +7,6 @@ module BankSystem {
     requires org.apache.commons.io;
 
     opens bank;
-    opens bank.user;
     opens bank.employee;
     opens bank.employee.create;
     opens bank.employee.deposit;
@@ -18,4 +17,5 @@ module BankSystem {
     opens bank.employee.payment.mobile;
     opens bank.employee.payment.dashboard;
     opens bank.employee.payment.hydro;
+    opens bank.employee.login;
 }

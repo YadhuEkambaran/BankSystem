@@ -2,7 +2,8 @@ package bank.common;
 
 public interface Constants {
 
-    String FOLDER_NAME_EMPLOYEE = "employee/";
+    String FOLDER_NAME_EMPLOYEE = "Employee/";
+    String FOLDER_NAME_EMPLOYEE_FILE_NAME = "employees";
     String FOLDER_NAME_USER = "user/";
     String FILE_FORMAT = ".txt";
 
@@ -45,6 +46,11 @@ public interface Constants {
          String USER_DEBIT_CARD_NO_EXPIRY_DATE = "debit_card_no_expiry_date";
          String USER_DEBIT_CARD_NO_EXPIRY_YEAR = "debit_card_no_expiry_year";
          String USER_DEBIT_CARD_NO_CVV = "cvv";
+
+         String EMPLOYEE_DETAILS = "employee_details";
+         String EMPLOYEE_ID = "emp_id";
+         String EMPLOYEE_PIN = "emp_pin";
+         String EMPLOYEE_NAME = "emp_name";
 
      }
 

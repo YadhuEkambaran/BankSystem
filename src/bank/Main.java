@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Scene scene = new Scene(new AnchorPane());
         SwapController swapController = new SwapController(scene);
-        swapController.goToMainPage();
+        swapController.goToLoginPage();
         primaryStage.setScene(scene);
         primaryStage.show();
     }

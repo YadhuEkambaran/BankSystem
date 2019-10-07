@@ -2,6 +2,7 @@ package bank.model;
 
 import bank.common.Constants;
 import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -55,6 +56,29 @@ public class FolderFileManager {
         File file = new File(fileName);
         JSONParser parser = new JSONParser();
         return (JSONObject) parser.parse(FileUtils.readFileToString(file, ENCODING_));
+    }
+
+    public static JSONObject checkLogin(String empId, String pin) {
+        String fileName = Constants.FOLDER_NAME_EMPLOYEE + Constants.FOLDER_NAME_EMPLOYEE_FILE_NAME + Constants.FILE_FORMAT;
+        try {
+            JSONObject employeeObj = read(fileName);
+            if (employeeObj != null) {
+                JSONArray employeesArray = (JSONArray) employeeObj.get(Constants.JsonKeys.EMPLOYEE_DETAILS);
+                for (int i = 0; i < employeesArray.size(); i++) {
+                    JSONObject jsonObject = (JSONObject) employeesArray.get(i);
+                    String empID = (String) jsonObject.get(Constants.JsonKeys.EMPLOYEE_ID);
+                    String empPIN = jsonObject.get(Constants.JsonKeys.EMPLOYEE_PIN) + "";
+
+                    if (empId.equals(empID) && empPIN.equals(pin)) {
+                        return jsonObject;
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
     }
 
     public static List<String> getUserAccountList() {

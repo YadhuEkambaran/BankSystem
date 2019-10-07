@@ -16,7 +16,7 @@
          </font>
       </Label>
       <Separator layoutY="49.0" prefHeight="0.0" prefWidth="800.0" />
-      <JFXTextField fx:id="tf_account_no" layoutX="14.0" layoutY="61.0" prefHeight="27.0" prefWidth="214.0" promptText="Account No">
+      <JFXTextField fx:id="tf_account_no" layoutX="14.0" onKeyTyped="#onInputChanged" layoutY="61.0" prefHeight="27.0" prefWidth="214.0" promptText="Account No">
          <font>
             <Font name="SansSerif Bold" size="14.0" />
          </font>

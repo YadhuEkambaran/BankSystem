@@ -82,24 +82,27 @@
       <Separator layoutY="537.0" prefHeight="3.0" prefWidth="817.0" />
       <Pane layoutX="583.0" layoutY="402.0" prefHeight="97.0" prefWidth="200.0" style="-fx-border-color: #E4E4E4; -fx-border-radius: 4;">
          <children>
-            <Label fx:id="label_balance" layoutX="58.0" layoutY="42.0" text="1000">
+            <Label fx:id="label_balance" layoutX="66.0" layoutY="42.0" text="1000">
                <font>
-                  <Font name="SansSerif Bold" size="25.0" />
+                  <Font name="SansSerif Bold" size="26.0" />
                </font>
             </Label>
-            <Label layoutX="23.0" layoutY="47.0" text="CAD">
+            <Label layoutX="77.0" layoutY="10.0" text="(CAD)">
                <font>
                   <Font name="SansSerif Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="10.0" layoutY="-9.0" style="-fx-background-color: #f4f4f4;" text="Balance" />
+            <Label layoutX="11.0" layoutY="10.0" style="-fx-background-color: #f4f4f4;" text="Balance">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font></Label>
          </children>
       </Pane>
       <Pane layoutX="545.0" layoutY="213.0" prefHeight="134.0" prefWidth="236.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
          <children>
-            <Label layoutX="74.0" layoutY="17.0" text="Account Type - ">
+            <Label layoutX="11.0" layoutY="17.0" text="Account type">
                <font>
-                  <Font name="SansSerif Regular" size="16.0" />
+                  <Font name="SansSerif Bold" size="16.0" />
                </font>
             </Label>
             <JFXRadioButton fx:id="rb_checking" layoutX="37.0" layoutY="52.0" text="Checking Account" />
@@ -108,12 +111,12 @@
       </Pane>
       <Pane layoutX="84.0" layoutY="359.0" prefHeight="167.0" prefWidth="271.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
          <children>
-            <Label layoutX="21.0" layoutY="37.0" text="1234     5678     9012    3456">
+            <Label fx:id="label_card_no" layoutX="21.0" layoutY="37.0" text="1234     5678     9012    3456">
                <font>
                   <Font name="Serif Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="21.0" layoutY="126.0" text="Yadhu ekambaran Naiker">
+            <Label fx:id="label_name" layoutX="21.0" layoutY="126.0" text="Yadhu ekambaran Naiker">
                <font>
                   <Font name="Sinhala MN" size="16.0" />
                </font>
@@ -123,7 +126,7 @@
                   <Font name="Sinhala MN" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="177.0" layoutY="84.0" text="07">
+            <Label fx:id="label_date" layoutX="177.0" layoutY="84.0" text="07">
                <font>
                   <Font name="Sinhala MN" size="14.0" />
                </font>
@@ -133,7 +136,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="197.0" layoutY="84.0" text="2017">
+            <Label fx:id="label_year" layoutX="197.0" layoutY="84.0" text="2017">
                <font>
                   <Font name="Sinhala MN" size="14.0" />
                </font>

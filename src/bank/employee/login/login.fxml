@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.employee.login.LoginController">
+   <children>
+      <AnchorPane layoutX="221.0" layoutY="171.0" prefHeight="258.0" prefWidth="364.0" style="-fx-border-color: #e4e4e4; -fx-border-radius: 4;">
+         <children>
+            <JFXTextField fx:id="user_account_no" alignment="CENTER" layoutX="77.0" layoutY="56.0" prefHeight="36.0" prefWidth="218.0" promptText="Employee ID" styleClass="jfx-text-field" stylesheets="@user.css">
+               <font>
+                  <Font name="SansSerif Bold" size="19.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXTextField>
+            <JFXButton layoutX="124.0" layoutY="183.0" onMouseClicked="#onLoginClick" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #2938dc;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="pf_pin" alignment="CENTER" layoutX="76.0" layoutY="119.0" prefHeight="27.0" prefWidth="218.0" promptText="PIN">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="11.0" layoutY="11.0" text="Employee login">
+         <font>
+            <Font name="SansSerif Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutY="51.0" prefHeight="3.0" prefWidth="800.0" />
+   </children>
+</AnchorPane>

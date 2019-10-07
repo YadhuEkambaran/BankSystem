@@ -3,6 +3,7 @@ package bank.common;
 import bank.employee.EmployeeController;
 import bank.employee.create.CreateUserController;
 import bank.employee.deposit.DepositController;
+import bank.employee.login.LoginController;
 import bank.employee.payment.dashboard.DashboardController;
 import bank.employee.payment.hydro.HydroController;
 import bank.employee.payment.mobile.MobileController;
@@ -11,8 +12,8 @@ import bank.employee.view.ViewController;
 import bank.employee.view.edit.EditController;
 import bank.employee.withdraw.WithdrawController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 
@@ -20,8 +21,33 @@ public class SwapController {
 
     private Scene mScene;
 
+    private JSONObject mEmployeeDetails;
+
     public SwapController(Scene mScene) {
         this.mScene = mScene;
+    }
+
+    public void setEmployeeDetails(JSONObject jsonObject) {
+        mEmployeeDetails = jsonObject;
+    }
+
+    public JSONObject getEmployeeDetails() {
+        return mEmployeeDetails;
+    }
+
+    public void goToLoginPage() {
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/bank/employee/login/login.fxml")
+        );
+        try {
+
+            mScene.setRoot(loader.load());
+            LoginController controller = loader.getController();
+            controller.init(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void goToMainPage() {
