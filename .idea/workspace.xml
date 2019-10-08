@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Almost final">
-      <change afterPath="$PROJECT_DIR$/Employee/employees.txt" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Basic functionalities over">
+      <change afterPath="$PROJECT_DIR$/user/1570484621294.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankSystem/bank/employee/employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankSystem/bank/employee/employee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankSystem/bank/user/user.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankSystem/bank/user/user.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/common/SwapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/common/SwapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/employee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/payment/dashboard/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/payment/dashboard/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/payment/dashboard/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/payment/dashboard/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/view/edit/EditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/view/edit/EditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/view/edit/edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/view/edit/edit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/employee/view/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/view/view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/model/FolderFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/model/FolderFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/model/TestFolderFileCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/model/TestFolderFileCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/user/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/login/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bank/user/user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bank/employee/login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,54 +64,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bank/employee/view/edit/edit.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bank/employee/view/view.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bank/employee/view/edit/EditController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
-                <element signature="e#1643#1644#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bank/employee/view/ViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="60" column="30" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -220,6 +154,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,8 +226,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +237,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570485489984" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570485570806" />
     <property name="dynamic.classpath" value="false" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15330662" />
@@ -435,8 +369,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.DatabaseExample" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.TestFolderFileCreation" />
     </list>
     <recent_temporary>
@@ -493,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570479413929</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Basic functionalities over">
+      <created>1570485554733</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570485554733</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -510,9 +451,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20243205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20529328" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -593,7 +533,8 @@
     <MESSAGE value="Sample File creation, writing and reading is added" />
     <MESSAGE value="User file" />
     <MESSAGE value="Almost final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost final" />
+    <MESSAGE value="Basic functionalities over" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic functionalities over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -699,12 +640,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../plugin/src/com/magnet/view/magnet_ui.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="23" column="95" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="95" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../jars/commons-io-2.6/commons-io-2.6.jar!/org/apache/commons/io/FileUtils.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -746,36 +687,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/1570327424312.txt" />
     <entry file="file://$PROJECT_DIR$/src/bank/employee/withdraw/withdraw.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="40" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="40" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/transfer/transfer.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="43" column="30" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="30" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/deposit/deposit.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/create/create_user.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -784,13 +725,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/1570336357664.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/user/1570336357664.txt" />
     <entry file="file://$PROJECT_DIR$/src/bank/common/InitController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -798,13 +733,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/1570390642301.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="58" lean-forward="true" selection-start-column="58" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/user/1570390642301.txt" />
     <entry file="file://$PROJECT_DIR$/src/bank/employee/deposit/DepositController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -836,20 +765,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/payment/hydro/hydro.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="46" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="46" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/payment/mobile/mobile.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="42" column="70" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/user/1570470957117.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -921,12 +850,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/employee.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
           <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -968,20 +897,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/payment/dashboard/dashboard.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/login/login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="28" column="43" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="43" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/user/1570484621294.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1012,6 +941,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/bank/employee/view/view.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bank/employee/view/edit/edit.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/bank/employee/view/edit/EditController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1031,22 +976,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bank/employee/view/edit/edit.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bank/employee/view/view.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
         </state>
       </provider>
     </entry>
